@@ -16,20 +16,18 @@ app.use(cors({
 
 const {Client} = require('pg');
 const conObject = {
-    user: 'esoft_project',
-    database: 'esoft_todo',
-    password: 'esoft'
+    user: 'postgres',
+    database: 'postgres',
+    password: 'postgres'
 };
 
 const client = new Client(conObject);
 client.connect();
 
-// Создаю стору
 const PgStore = new (require('connect-pg-simple')(session))({
     conObject,
 });
 
-// Создаю сессию
 app.use(session({
     secret: 'supersecret',
     resave: false,

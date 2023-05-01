@@ -12,7 +12,8 @@ module.exports = {
                 id: 'id',
                 name: 'name',
                 lastName: 'last_name',
-                middleName: 'middle_name' 
+                middleName: 'middle_name',
+                leader: 'leader'
             })
             .from('users')
             .where({'leader': userId});

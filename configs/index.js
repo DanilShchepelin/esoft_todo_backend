@@ -3,9 +3,9 @@ module.exports = {
         database: {
             client: 'postgresql',
             connection: {
-                database: 'esoft_todo',
-                user: 'esoft_project',
-                password: 'esoft'
+                database: 'postgres',
+                user: 'postgres',
+                password: 'postgres'
             },
             migrations: {
                 tableName: 'knex_migrations',
